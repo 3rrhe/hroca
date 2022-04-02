@@ -1,0 +1,25 @@
+add_and_sub:
+' Codigo PICAXE
+' Definition of variables
+let b1 = 1 'a1
+let b2 = 1 'a2
+let b3 = 1 'a3
+let b4 = 1 'a4
+
+DO
+  IF b3 < 30 OR b1 < 1 THEN  'Addition
+    b1 = b1 + 4
+    b2 = b2 + 2
+    b3 = b1 + b2
+    high b.0
+  END IF
+
+  IF b3 > 49 OR b1 > 19 THEN  'Substraction
+    b1 = b1 - 1
+    b2 = b2 - 1
+    b3 = b1 + b2
+    low b.0
+  END IF
+LOOP WHILE b4 >= 1
+
+goto add_and_sub
